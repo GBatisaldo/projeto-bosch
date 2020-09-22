@@ -1,0 +1,17 @@
+h1 {
+    flex: auto;
+    text-align: center;
+    background-color: black;
+    color: grey;
+    font-size: 30px;
+    margin: 0;
+}
+
+.title {
+    padding: 0;
+}
+
+.drone-tela {
+    width: 100%;
+
+}
