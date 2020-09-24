@@ -27,7 +27,6 @@ function AcaoModal(props) {
         setStats(newStats);        
         props.setStats(newStats);
     }
-    console.log(produto);
     return (
         <Modal
             show={props.show}
