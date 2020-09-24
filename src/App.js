@@ -2,7 +2,6 @@ import React from 'react';
 import Drone from './pages/drone/drone';
 import Produtos from './pages/produtos/produtos';
 import './pages/style/title.css';
-import AcaoModal from './pages/produtos/modal';
 
 function App() {
   return (
@@ -10,7 +9,6 @@ function App() {
       <div className="row">
         <Drone />
         <Produtos />
-        <AcaoModal />
       </div>
     </div>
   );
