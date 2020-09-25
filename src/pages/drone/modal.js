@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
+<<<<<<< HEAD
+=======
+
+function AcaoModal(props) {
+     
+import { Modal, ModalBody, ModalTitle, Button, Form } from 'react-bootstrap';
+>>>>>>> master
 
 function AcaoModal(props) {
      
