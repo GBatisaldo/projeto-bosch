@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { Modal, Button, Form } from 'react-bootstrap';
+
+function AcaoModal(props) {
+     
 import { Modal, ModalBody, ModalTitle, Button, Form } from 'react-bootstrap';
 
 function AcaoModal(props) {
      
-    
     const [produto, setProduto] = useState("");
     const [quantidade, setQuantidade] = useState("");
     const [peso, setPeso] = useState("");
