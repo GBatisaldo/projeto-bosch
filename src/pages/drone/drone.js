@@ -1,5 +1,6 @@
 import React from 'react';
 import DroneTela from './droneTela';
+import MapaDrone from './mapadron';
 import Resultado from './resultado';
 
 function Drone() {
@@ -9,6 +10,8 @@ function Drone() {
             <DroneTela />
             <h1>Resultado</h1>
             <Resultado />
+            <h1>Mapa</h1>
+            <MapaDrone />
         </div>
     );
 }

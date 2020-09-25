@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { Modal, ModalBody, ModalTitle, Button } from 'react-bootstrap';
+import { Modal, Button, Form } from 'react-bootstrap';
 
 function AcaoModal(props) {
-=======
-import { Modal, Button, Form } from 'react-bootstrap';
+     
+import { Modal, ModalBody, ModalTitle, Button, Form } from 'react-bootstrap';
 
 function AcaoModal(props) {
      
@@ -12,7 +11,6 @@ function AcaoModal(props) {
     const [quantidade, setQuantidade] = useState("");
     const [peso, setPeso] = useState("");
     const [local, setLocal] = useState("");
->>>>>>> 9117404... Adicionando produtos a lista
 
     const [stats, setStats] = useState({
         produto: "",
@@ -23,16 +21,15 @@ function AcaoModal(props) {
 
     function statsClick() {
         const newStats = {
-            produto: "produto",
-            quantidade: "quantidade",
-            peso: "peso",
-            local: "local"
+            produto,
+            quantidade,
+            peso,
+            local
         }
 
         setStats(newStats);        
         props.setStats(newStats);
     }
-
     return (
         <Modal
             show={props.show}
@@ -40,12 +37,20 @@ function AcaoModal(props) {
         >
             <Modal.Header closeButton>
                 <Modal.Title>
-                    Title
+                    Editar
                 </Modal.Title>
             </Modal.Header>
+            <Modal.Body>
+                <Form.Group>
+                    <Form.Control onChange={(event) => setProduto(event.target.value)} type="text" placeholder="Produto" /> <br />
+                    <Form.Control onChange={(event) => setQuantidade(event.target.value)} type="number" placeholder="Quantidade" /> <br />
+                    <Form.Control onChange={(event) => setPeso(event.target.value)} type="text" placeholder="Peso" /> <br />
+                    <Form.Control onChange={(event) => setLocal(event.target.value)} type="text" placeholder="Local" />
+                </Form.Group>
+            </Modal.Body>
             <Modal.Footer>
-                <Button onClick={statsClick}>setStats</Button>
-                <Button onClick={props.onHide}>Close</Button>
+                <Button variant="success" onClick={statsClick}>Editar</Button>
+                <Button variant="danger" onClick={props.onHide}>Cancelar</Button>
             </Modal.Footer>
         </Modal>
     );
