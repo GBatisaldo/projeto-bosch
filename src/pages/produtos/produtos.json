@@ -1,0 +1,14 @@
+[
+    {
+        "produto": "Prego",
+        "quantidade": "10",
+        "peso": "300kg",
+        "local": "local sla"
+    },
+    {
+        "produto": "Martelo",
+        "quantidade": "5",
+        "peso": "10kg",
+        "local": "caixa sla onde"
+    }
+]
