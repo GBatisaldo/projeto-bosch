@@ -31,10 +31,10 @@ function Resultado() {
             }
         })
 
-        if(!hasProduto) {
-            state.produtos.push(stats);
-            dispatch({produtos: state.produtos})
-        }
+        // if(!hasProduto) {
+        //     state.produtos.push(stats);
+        //     //dispatch({produtos: state.produtos})
+        // }
     }
 
     return (

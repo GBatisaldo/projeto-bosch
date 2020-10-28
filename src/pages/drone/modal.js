@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
+import { api } from '../../services/api'
+
+import { useGlobalState } from '../../App'
 
 function AcaoModal(props) {
+    const [state, dispatch] = useGlobalState();
      
     const [produto, setProduto] = useState("");
     const [quantidade, setQuantidade] = useState("");
@@ -25,7 +29,24 @@ function AcaoModal(props) {
 
         setStats(newStats);        
         props.setStats(newStats);
+        enviarApi(newStats);
     }
+
+    function enviarApi(newStats) {
+        const produto = {
+            nomeProduto: newStats.produto,
+            quantidade: newStats.quantidade,
+            peso: newStats.peso,
+            local: newStats.local,
+            imageUrl: 'imageUrlTesteSeiLaFodase'
+        }
+
+        api.post('produtos', produto).then(response => {
+            dispatch(state.produtos.push(response.data[0]))
+            console.log(response.data)
+        })
+    }
+
     return (
         <Modal
             show={props.show}

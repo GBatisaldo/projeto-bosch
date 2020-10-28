@@ -3,6 +3,8 @@ import Drone from './pages/drone/drone';
 import Produtos from './pages/produtos/produtos';
 import './pages/style/title.css';
 
+import { api } from './services/api'
+
 const globalState = {
     produtos: []
 };
